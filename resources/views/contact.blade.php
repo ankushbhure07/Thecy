@@ -36,7 +36,7 @@
         header.masthead {
             position: relative;
             background-color: rgba(255, 0, 0, 0) !important;
-            background: url("../assets/img/contact.png") no-repeat center center;
+            background: url("public/assets/img/contact.png") no-repeat center center;
             background-size: cover;
             padding-top: 3rem;
             padding-bottom: 1.5rem;

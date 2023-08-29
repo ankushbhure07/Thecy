@@ -41,7 +41,7 @@
         }
     </style>
 @endsection
-@section('content')
+@section('content')  
     <!-- Masthead-->
     <header class="masthead">
         <div class="container position-relative">

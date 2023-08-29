@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"
         type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-    <link href="{{ asset('/public/css/styles.css') }}" rel="stylesheet" />
+    <link href="{{ asset('public/css/styles.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     @yield('customcss')
@@ -106,26 +106,74 @@
                 margin-top: 0;
             }
         }
+
+
+
+
+        /* ------------------------ */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            transition: opacity 1s, visibility 1s;
+        }
+        
+        .loader--hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .loader::after {
+            content: "";
+            width: 75px;
+            height: 75px;
+            border: 15px solid #dddddd;
+            border-top-color: #009578;
+            border-radius: 50%;
+            animation: loading 5s ease infinite;
+        }
+        /* ------------------------ */
+        
+        @keyframes loading {
+            from {
+                transform: rotate(0turn);
+            }
+
+            to {
+                transform: rotate(1turn);
+            }
+        }
     </style>
 </head>
 
 <body style="background-color:#fffffc;">
 
-    <div class="container" style="width: 48%;">
+    <div class="loader"></div>
 
+    <div class="container" style="width: 48%;">
         <nav class="navbar navbar-expand-sm">
             <div class="container">
+
                 <a class="navbar-brand" href="{{ url('/') }}" style="font-weight:600;font-size: 1.5rem;">CandY</a>
-                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavId">
-                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                    </ul>
-                    <div class="d-flex my-2 my-lg-0">
-                        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1">
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/') }}" aria-current="page">Home</a>
                             </li>
@@ -151,9 +199,9 @@
                 </div>
             </div>
         </nav>
+    </div>
+    </div>
 
-    </div>
-    </div>
 
     <main>
         @yield('content')
@@ -163,13 +211,17 @@
             <div class="row">
                 <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
                     <ul class="list-inline mb-2">
+                        <li class="list-inline-item">
+                            <a class="nav-link" href="{{ url('/') }}" aria-current="page">Home</a>
+                        </li>
+                        <li class="list-inline-item">⋅</li>
+                        <li class="list-inline-item">
+                            <a class="nav-link" href="{{ url('/services') }}">Services</a>
+                        </li>
+                        <li class="list-inline-item">⋅</li>
                         <li class="list-inline-item"><a href="{{ url('/about') }}">About</a></li>
                         <li class="list-inline-item">⋅</li>
                         <li class="list-inline-item"><a href="{{ route('contact.index') }}">Contact</a></li>
-                        <li class="list-inline-item">⋅</li>
-                        <li class="list-inline-item"><a href="#!">Terms of Use</a></li>
-                        <li class="list-inline-item">⋅</li>
-                        <li class="list-inline-item"><a href="#!">Privacy Policy</a></li>
                     </ul>
                     <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2023. All Rights Reserved.</p>
                 </div>
@@ -199,5 +251,14 @@
     </script>
 </body>
 @yield('customjs')
+<script>
+    window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+        loader.classList.add("loader--hidden");
+        loader.addEventListener("transitionend", () => {
+            document.body.removeChild(loader);
+        });
+    });
+</script>
 
 </html>
