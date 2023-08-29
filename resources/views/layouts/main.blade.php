@@ -111,7 +111,7 @@
 
 
         /* ------------------------ */
-        .loader {
+        /* .loader {
             position: fixed;
             top: 0;
             left: 0;
@@ -137,8 +137,7 @@
             border-top-color: #009578;
             border-radius: 50%;
             animation: loading 5s ease infinite;
-        }
-        /* ------------------------ */
+        }        
         
         @keyframes loading {
             from {
@@ -148,13 +147,13 @@
             to {
                 transform: rotate(1turn);
             }
-        }
+        } */
     </style>
 </head>
 
 <body style="background-color:#fffffc;">
 
-    <div class="loader"></div>
+    {{-- <div class="loader"></div> --}}
 
     <div class="container" style="width: 48%;">
         <nav class="navbar navbar-expand-sm">
