@@ -99,10 +99,29 @@
 
         .details {
             margin: 6rem 0 4rem 0;
-        }
+        } 
 
         .details .fa-solid {
             font-size: 1.6rem;
+        }
+        #submitBtn{
+            text-align: left;
+            margin-top: auto;
+        }
+        @media screen and (max-width: 761px) {
+            #submitBtn{
+                text-align: center;
+                margin-top: auto;
+            }  
+            #name{
+                margin-bottom: 1rem;
+            }          
+            #mobileNo{
+                margin-bottom: 1rem;
+            }          
+            .det{
+                margin-bottom: 1rem;
+            }          
         }
     </style>
 @endsection
@@ -123,15 +142,15 @@
         <div class="container" style="width:65%;">
             <div class="details">
                 <div class="row text-center">
-                    <div class="col-md-4">
+                    <div class="col-md-4 det">
                         <i class="fa-solid fa-location-dot"></i><br>
                         <strong>Address:- Near Saraswati Lawn Nara, Nagpur 440014.</strong>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 det">
                         <i class="fa-solid fa-phone"></i><br>
                         <strong>Number:- 1234567890</strong>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 det">
                         <i class="fa-solid fa-envelope"></i><br>
                         <strong>Email:- contact@thecy.com</strong>
                     </div>
@@ -169,30 +188,30 @@
                 @csrf
                 <div class="row">
                     <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" name="name" class="form-control" value="{{ old('name') }}">
+                        <div class="col-md-6" id="name">
+                            {{-- <label for="name" class="form-label">Name</label> --}}
+                            <input type="text" name="name" class="form-control" value="{{ old('name') }}" placeholder="Name">
                             @error('name')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
                         <div class="col-md-6">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" name="email" class="form-control" value="{{ old('email') }}">
+                            {{-- <label for="email" class="form-label">Email</label> --}}
+                            <input type="email" name="email" class="form-control" value="{{ old('email') }}" placeholder="Email">
                             @error('email')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="phone" class="form-label">Mobile Number</label>
-                            <input type="number" name="number" class="form-control" value="{{ old('number') }}">
+                        <div class="col-md-6" id="mobileNo">
+                            {{-- <label for="phone" class="form-label">Mobile Number</label> --}}
+                            <input type="number" name="number" class="form-control" value="{{ old('number') }}" placeholder="Mobile Number">
                             @error('number')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
-                        <div class="col-md-6" style="text-align: left; margin-top:auto;">
+                        <div class="col-md-6" id="submitBtn">
                             <button type="submit" class="btn btn-primary" id="formSubmit">Submit</button>
                         </div>
                     </div>
