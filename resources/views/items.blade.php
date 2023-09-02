@@ -137,7 +137,7 @@
                         @foreach ($product as $item)
                             <div class="col-lg-3 order-lg-1 my-auto showcase-text mb-5">
                                 <a href="{{ route('single', $item->id) }}">
-                                    <img src="product_image/{{ $item->product_image }}" class="img-fluid" alt="">
+                                    <img src="public/product_image/{{ $item->product_image }}" class="img-fluid" alt="">
                                 </a>
                                 <div class="row justify-content-center align-items-center g-2 mt-1">
                                     <div class="col-md-9">

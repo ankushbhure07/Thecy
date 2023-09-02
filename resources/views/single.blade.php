@@ -195,28 +195,28 @@
                             <div id="pview" class="mb-2 pimg image-wrapper col-md-6">
                                 <div>
                                     <div class="loaded" style="width: 100%; height: 472px; background: rgb(255, 235, 231);">
-                                        <img src="../product_image/{{ $product->product_image }}" class="img-fluid">
+                                        <img src="../public/product_image/{{ $product->product_image }}" class="img-fluid">
                                     </div>
                                 </div>
                             </div>
                             <div id="pview" class="mb-2 pimg image-wrapper col-md-6">
                                 <div>
                                     <div class="loaded" style="width: 100%; height: 472px; background: rgb(255, 235, 231);">
-                                        <img src="../product_image/{{ $product->product_image }}" class="img-fluid">
+                                        <img src="../public/product_image/{{ $product->product_image }}" class="img-fluid">
                                     </div>
                                 </div>
                             </div>
                             <div id="pview" class="mb-2 pimg image-wrapper col-md-6">
                                 <div>
                                     <div class="loaded" style="width: 100%; height: 472px; background: rgb(255, 235, 231);">
-                                        <img src="../product_image/{{ $product->product_image }}" class="img-fluid">
+                                        <img src="../public/product_image/{{ $product->product_image }}" class="img-fluid">
                                     </div>
                                 </div>
                             </div>
                             <div id="pview" class="mb-2 pimg image-wrapper col-md-6">
                                 <div>
                                     <div class="loaded" style="width: 100%; height: 472px; background: rgb(255, 235, 231);">
-                                        <img src="../product_image/{{ $product->product_image }}" class="img-fluid">
+                                        <img src="../public/product_image/{{ $product->product_image }}" class="img-fluid">
                                     </div>
                                 </div>
                             </div>
@@ -399,7 +399,7 @@
                             @foreach ($limitedRows as $item)
                                 <div class="col-xs-12 col-sm-6 col-md-2">
                                     <a href="{{ route('single', $item->id) }}"><img
-                                            src="../product_image/{{ $item->product_image }}" style="width: 100%;"
+                                            src="../public//product_image/{{ $item->product_image }}" style="width: 100%;"
                                             alt=""></a>
                                     <p class="text-center"> <b> {{ $item->product_name }} </b></p>
                                     <p class="text-center">₹ {{ $item->product_price }} </p>
@@ -412,7 +412,7 @@
                             @foreach ($limitedRows as $item)
                                 <div class="col-xs-12 col-sm-6 col-md-2">
                                     <a href="{{ route('single', $item->id) }}"><img
-                                            src="../product_image/{{ $item->product_image }}" style="width: 100%;"
+                                            src="../public/product_image/{{ $item->product_image }}" style="width: 100%;"
                                             alt=""></a>
                                     <p class="text-center"> <b> {{ $item->product_name }} </b></p>
                                     <p class="text-center">₹ {{ $item->product_price }} </p>

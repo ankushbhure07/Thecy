@@ -80,8 +80,7 @@
                                                 $allSizes = ['S', 'M', 'L', 'XL', 'XXL', 'XXXL'];
                                                 $topGroup = ['S', 'M', 'L'];
                                                 $bottomGroup = ['XL', 'XXL', 'XXXL'];                                                
-                                            }
-                                            
+                                            }                                            
                                         @endphp
                                         <div class="d-flex">
                                             @if ($update->product_size)
