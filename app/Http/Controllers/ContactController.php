@@ -43,7 +43,7 @@ class ContactController extends Controller
         $store->save();
 
         if($store){ 
-            return redirect('contact')->with('success', 'Product has been added!!');
+            return redirect('contact')->with('success', 'Thank you for reaching out. We will respond promptly.');
         }else{            
             return redirect('contact')->with('fail', 'Something went wrong!!');
         }
