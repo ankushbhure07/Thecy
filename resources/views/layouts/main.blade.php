@@ -91,37 +91,20 @@
             transition: ;
         }
 
-        @media all and (min-width: 992px) {
-            .navbar .nav-item .dropdown-menu {
-                display: none;
-            }
-
-            .navbar .nav-item:hover .nav-link {}
-
-            .navbar .nav-item:hover .dropdown-menu {
-                display: block;
-            }
-
-            .navbar .nav-item .dropdown-menu {
-                margin-top: 0;
-            }
-        }
-
         .navv {
             width: 100%;
         }
 
         @media screen and (max-width: 425px) {
-            .navv {
+            #navv {
                 width: 100%;
             }
         }
-        
     </style>
 </head>
 
 <body style="background-color:#fffffc;">
-    
+
 
     <div class="container" id="navv">
         <nav class="navbar navbar-expand-sm">
@@ -135,12 +118,12 @@
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">C&Y</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
                     </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1">
+                    <div class="offcanvas-body justify-content-end">
+                        <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/') }}" aria-current="page">Home</a>
                             </li>
@@ -218,8 +201,6 @@
     </script>
 </body>
 @yield('customjs')
-<script>
-  
-</script>
+<script></script>
 
 </html>

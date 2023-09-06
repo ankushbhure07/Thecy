@@ -10870,7 +10870,7 @@ header.masthead h1, header.masthead .h1 {
 }
 
 .showcase .showcase-text {
-  padding: 3rem;
+  padding: 1rem !important;
 }
 .showcase .showcase-img {
   min-height: 30rem;
@@ -10878,7 +10878,7 @@ header.masthead h1, header.masthead .h1 {
 }
 @media (min-width: 768px) {
   .showcase .showcase-text {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 }
 

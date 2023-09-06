@@ -36,17 +36,35 @@
             color: #c89364;
             transition: 0.25s ease-in-out;
         }
-        hr{
+
+        hr {
             margin: 4px !important;
         }
+
+        @media (max-width: 1024px) {
+            .item-font {
+                font-size: 19px;
+            }
+        }
+
+        @media (max-width: 425px) {
+            .item-font {
+                font-size: 16px;
+            }
+
+            .col-6 {
+                padding: 0;
+            }
+        }
+       
     </style>
 @endsection
-@section('content')  
+@section('content')
     <!-- Masthead-->
     <header class="masthead">
         <div class="container position-relative">
             <div class="row justify-content-center">
-                <div class="col-xl-6">
+                <div class="col-md-6">
                     <div class="text-center text-white">
                         <!-- Page heading-->
                         <h1 class="mb-5">"Your Style, Your Statement: Unleash the Power of Personalized Fashion"</h1>
@@ -81,7 +99,7 @@
                                     <div class="fw-bolder">Form submission successful!</div>
                                     <p>To activate this form, sign up at</p>
                                     <a class="text-white"
-                                        href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                        href=""></a>
                                 </div>
                             </div>
                             <!-- Submit error message-->
@@ -131,23 +149,23 @@
         <div class="container-fluid p-0" id="images" style="width: 90%;">
             <div class="row g-0">
                 @foreach ($product as $item)
-                    <div class="col-lg-3 order-lg-1 my-auto showcase-text">
+                    <div class="col-6 col-md-4 col-lg-3 order-lg-1 showcase-text">
                         <a href="{{ route('single', $item->id) }}">
                             <img src="public/product_image/{{ $item->product_image }}" class="img-fluid" alt="">
                         </a>
                         <div class="row justify-content-center align-items-center g-2 mt-1">
-                            <div class="col-md-6">
-                                <h3 style="text-align: left;">{{ $item->product_name }}</h3>
+                            <div class="col-6">
+                                <h3 class="item-font" style="text-align: left;">{{ $item->product_name }}</h3>
                             </div>
-                            <div class="col-md-6">
-                                <h3 style="text-align: right;"> {{ $item->product_type }} </h3>
+                            <div class="col-6">
+                                <h3 class="item-font" style="text-align: right;"> {{ $item->product_type }} </h3>
                             </div>
                         </div>
                         <hr>
                         <div class="row">
-                            <div class="col-md-3">
-                                <h4 class="lead mb-0" style="font-weight: 400">₹ {{ $item->product_price }}</h4>
-                            </div>                           
+                            <div class="col-md-6">
+                                <h4 class="mb-0" style="font-weight: 400">₹ {{ $item->product_price }}</h4>
+                            </div>
                         </div>
                     </div>
                 @endforeach
@@ -164,14 +182,16 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                        <img class="img-fluid rounded-circle mb-3" src="public/assets/img/testimonials-1.jpg" alt="..." />
+                        <img class="img-fluid rounded-circle mb-3" src="public/assets/img/testimonials-1.jpg"
+                            alt="..." />
                         <h5>Margaret E.</h5>
                         <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                        <img class="img-fluid rounded-circle mb-3" src="public/assets/img/testimonials-2.jpg" alt="..." />
+                        <img class="img-fluid rounded-circle mb-3" src="public/assets/img/testimonials-2.jpg"
+                            alt="..." />
                         <h5>Fred S.</h5>
                         <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super
                             nice landing pages."</p>
@@ -179,7 +199,8 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                        <img class="img-fluid rounded-circle mb-3" src="public/assets/img/testimonials-3.jpg" alt="..." />
+                        <img class="img-fluid rounded-circle mb-3" src="public/assets/img/testimonials-3.jpg"
+                            alt="..." />
                         <h5>Sarah W.</h5>
                         <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"
                         </p>
@@ -193,7 +214,7 @@
         <div class="container position-relative">
             <div class="row justify-content-center">
                 <div class="col-xl-6">
-                    <h2 class="mb-4">Ready to get started? Sign up now!</h2>                
+                    <h2 class="mb-4">Ready to get started? Sign up now!</h2>
                     <form class="form-subscribe" id="contactFormFooter" data-sb-form-api-token="API_TOKEN">
                         <!-- Email address input-->
                         <div class="row">
@@ -208,7 +229,7 @@
                             <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton"
                                     type="submit">Submit</button></div>
                         </div>
-                    
+
                         <div class="d-none" id="submitSuccessMessage">
                             <div class="text-center mb-3">
                                 <div class="fw-bolder">Form submission successful!</div>
@@ -217,7 +238,7 @@
                                     href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                             </div>
                         </div>
-                  
+
                         <div class="d-none" id="submitErrorMessage">
                             <div class="text-center text-danger mb-3">Error sending message!</div>
                         </div>
@@ -231,4 +252,3 @@
 @section('footer')
     <!-- Footer-->
 @endsection
-</body>
