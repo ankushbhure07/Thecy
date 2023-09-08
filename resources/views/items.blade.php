@@ -56,6 +56,22 @@
             font-size: 15px;
             font-weight: 400;
         }
+
+        @media (max-width: 1024px) {
+            .item-font {
+                font-size: 19px;
+            }
+        }
+
+        @media (max-width: 425px) {
+            .item-font {
+                font-size: 16px;
+            }
+
+            .col-6 {
+                padding: 0;
+            }
+        }
     </style>
 @endsection
 @section('content')
@@ -105,7 +121,8 @@
                 <div class="col-lg-3 col-md-4 col-12 filterCol">
                     <div class="mb-3">
                         <label class="">Products</label>
-                        <select class="form-select form-select-sm" name="" id="" onfocus="this.size=4;" onblur="this.size=0;" onchange="this.size=1; this.blur()">
+                        <select class="form-select form-select-sm" name="" id="" onfocus="this.size=4;"
+                            onblur="this.size=0;" onchange="this.size=1; this.blur()">
                             <option selected>Select</option>
                             <option value="">T-shirt</option>
                             <option value="">Caps</option>
@@ -135,16 +152,17 @@
                 <div class="col-lg-9 col-md-8 col-12 pro-list mb-5">
                     <div class="row">
                         @foreach ($product as $item)
-                            <div class="col-lg-3 order-lg-1 my-auto showcase-text mb-5">
+                            <div class="col-6 col-md-4 col-lg-3 order-lg-1 showcase-text" style="margin-bottom: 25px">
                                 <a href="{{ route('single', $item->id) }}">
-                                    <img src="public/product_image/{{ $item->product_image }}" class="img-fluid" alt="">
+                                    <img src="public/product_image/{{ $item->product_image }}" class="img-fluid"
+                                        alt="">
                                 </a>
                                 <div class="row justify-content-center align-items-center g-2 mt-1">
-                                    <div class="col-md-9">
-                                        <h6 style="text-align: left;">{{ $item->product_name }}</h6>
+                                    <div class="col-6">
+                                        <h6 class="item-font" style="text-align: left;">{{ $item->product_name }}</h6>
                                     </div>
-                                    <div class="col-md-3">
-                                        <h6 style="text-align: left;"> {{ $item->product_type }} </h6>
+                                    <div class="col-6">
+                                        <h6 class="item-font" style="text-align: right;"> {{ $item->product_type }} </h6>
                                     </div>
                                 </div>
                                 <hr>
