@@ -25,7 +25,7 @@
         header.masthead {
             position: relative;
             background-color: #343a40;
-            background: url("../assets/img/bg1.jfif") no-repeat center center;
+            background: url("public/assets/img/bg1.jfif") no-repeat center center;
             background-size: cover;
             padding-top: 3rem;
             padding-bottom: 1.5rem;
