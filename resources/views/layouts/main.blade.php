@@ -5,7 +5,7 @@
     <title>@yield('title')</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/icon.png') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('public/assets/img/icon.png') }}" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"
         type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
@@ -91,13 +91,9 @@
             transition: ;
         }
 
-        .navv {
-            width: 100%;
-        }
-
         @media screen and (max-width: 425px) {
             #navv {
-                width: 100%;
+                /* width: 100%; */
             }
         }
     </style>
@@ -106,10 +102,9 @@
 <body style="background-color:#fffffc;">
 
 
-    <div class="container" id="navv">
+    <div class="container">
         <nav class="navbar navbar-expand-sm">
             <div class="container-fluid">
-
                 <a class="navbar-brand" href="{{ url('/') }}" style="font-weight:600;font-size: 1.5rem;">CandY</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -127,14 +122,21 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/') }}" aria-current="page">Home</a>
                             </li>
+
                             <li class="nav-item dropdown">
-                                <a class="nav-link  dropdown-toggle" href="{{ url('/items') }}">Items</a>
+                                <a class="nav-link dropdown-toggle" href="" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Items
+                                </a>
                                 <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="{{ url('/items') }}">All Items</a>
+                                    <li>
                                     <li><a class="dropdown-item" href="{{ url('/gifting') }}">Gifting Items</a>
                                     <li>
                                     <li><a class="dropdown-item" href="#"> Personalized </a></li>
                                 </ul>
                             </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/services') }}">Services</a>
                             </li>

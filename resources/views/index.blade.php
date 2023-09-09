@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('title')
-    Home
+Customization & You - Nara, Jaripatka Nagpur
 @endsection
 @section('customcss')
     <style>
@@ -144,7 +144,7 @@
         </div>
     </section>
     <!-- Image Showcases-->
-    <section class="showcase">
+    <section class="showcase">  
         <h1 class="mt-3 mb-4 text-center" style="font-weight: 600; color:#956943;">Some of our Products</h1>
         <div class="container-fluid p-0" id="images" style="width: 90%;">
             <div class="row g-0">
