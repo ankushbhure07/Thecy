@@ -51,6 +51,9 @@
             #rs {
                 font-size: 16px !important;
             }
+            #allItems a{
+                font-size: 1.8rem;
+            }
         }
 
         @media (max-width: 1024px) {

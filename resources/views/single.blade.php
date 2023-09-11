@@ -87,86 +87,106 @@
         .sizelist li {}
 
         /* --------------------- */
-        a {
-            -webkit-transition: 0.3s all ease;
-            -o-transition: 0.3s all ease;
-            transition: 0.3s all ease;
+        /* a {
+                                            -webkit-transition: 0.3s all ease;
+                                            -o-transition: 0.3s all ease;
+                                            transition: 0.3s all ease;
+                                        }
+
+                                        a,
+                                        a:hover {
+                                            text-decoration: none !important;
+                                        }
+
+                                        .content {
+                                            padding: 7rem 0;
+                                        }
+
+                                        h2 {
+                                            font-size: 20px;
+                                        }
+
+                                        .bg-left-half {
+                                            position: relative;
+                                        }
+
+                                        .bg-left-half:before {
+                                            position: absolute;
+                                            width: 50%;
+                                            height: 100%;
+                                            z-index: -1;
+                                            content: "";
+                                            left: 0;
+                                            top: 0;
+                                            background-color: #f8f9fa;
+                                        }
+
+                                        .media-29101 img {
+                                            margin-bottom: 20px;
+                                        }
+
+                                        .media-29101 h3 {
+                                            font-size: 18px;
+                                            font-weight: 900 !important;
+                                        }
+
+                                        .media-29101 h3 a {
+                                            color: #6c757d;
+                                        }
+
+                                        .owl-2-style .owl-nav {
+                                            display: none;
+                                        }
+
+                                        .owl-2-style .owl-dots {
+                                            text-align: center;
+                                            position: relative;
+                                            bottom: -30px;
+                                        }
+
+                                        .owl-2-style .owl-dots .owl-dot {
+                                            display: inline-block;
+                                        }
+
+                                        .owl-2-style .owl-dots .owl-dot span {
+                                            display: inline-block;
+                                            width: 15px;
+                                            height: 3px;
+                                            border-radius: 0px;
+                                            background: #cccccc;
+                                            -webkit-transition: 0.3s all cubic-bezier(0.32, 0.71, 0.53, 0.53);
+                                            -o-transition: 0.3s all cubic-bezier(0.32, 0.71, 0.53, 0.53);
+                                            transition: 0.3s all cubic-bezier(0.32, 0.71, 0.53, 0.53);
+                                            margin: 3px;
+                                        }
+
+                                        .owl-2-style .owl-dots .owl-dot.active span {
+                                            background: #007bff;
+                                        }
+
+                                        .owl-2-style .owl-dots .owl-dot:active,
+                                        .owl-2-style .owl-dots .owl-dot:focus {
+                                            outline: none;
+                                        } */
+
+        @media screen and (min-width:576px) {
+            .carousel-inner {
+                display: flex;
+            }
+
+            .carousel-item {
+                display: block;
+                margin-right: 0;
+                flex: 0 0 calc(100%/3);
+            }
         }
 
-        a,
-        a:hover {
-            text-decoration: none !important;
+        .carousel-inner {
+            padding: 1rem;
         }
 
-        .content {
-            padding: 7rem 0;
-        }
-
-        h2 {
-            font-size: 20px;
-        }
-
-        .bg-left-half {
-            position: relative;
-        }
-
-        .bg-left-half:before {
-            position: absolute;
-            width: 50%;
-            height: 100%;
-            z-index: -1;
-            content: "";
-            left: 0;
-            top: 0;
-            background-color: #f8f9fa;
-        }
-
-        .media-29101 img {
-            margin-bottom: 20px;
-        }
-
-        .media-29101 h3 {
-            font-size: 18px;
-            font-weight: 900 !important;
-        }
-
-        .media-29101 h3 a {
-            color: #6c757d;
-        }
-
-        .owl-2-style .owl-nav {
-            display: none;
-        }
-
-        .owl-2-style .owl-dots {
-            text-align: center;
-            position: relative;
-            bottom: -30px;
-        }
-
-        .owl-2-style .owl-dots .owl-dot {
-            display: inline-block;
-        }
-
-        .owl-2-style .owl-dots .owl-dot span {
-            display: inline-block;
-            width: 15px;
-            height: 3px;
-            border-radius: 0px;
-            background: #cccccc;
-            -webkit-transition: 0.3s all cubic-bezier(0.32, 0.71, 0.53, 0.53);
-            -o-transition: 0.3s all cubic-bezier(0.32, 0.71, 0.53, 0.53);
-            transition: 0.3s all cubic-bezier(0.32, 0.71, 0.53, 0.53);
-            margin: 3px;
-        }
-
-        .owl-2-style .owl-dots .owl-dot.active span {
-            background: #007bff;
-        }
-
-        .owl-2-style .owl-dots .owl-dot:active,
-        .owl-2-style .owl-dots .owl-dot:focus {
-            outline: none;
+        .card {
+            margin: 0.5rem;
         }
     </style>
 @endsection
@@ -350,7 +370,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div> --}} 
+                            </div> --}}
 
                             <div class="accordion" id="accordionExample">
                                 <div class="accordion-item">
@@ -392,7 +412,9 @@
             </div>
 
             <h1 class="text-center mb-5 mt-5"> Product Slider</h1>
-            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+
+
+            {{-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner" style="justify-content: center;">
                     <div class="carousel-item active">
                         <div class="row d-flex">
@@ -431,9 +453,101 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
+            </div> --}}
+            {{-- <img src="../public\assets\img\t1.jpg" alt=""> --}}
+
+            {{-- ------------------ --}}
+
+
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card">
+                            <img src="../public\assets\img\t1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 1</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <img src="../public\assets\img\t1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 2</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <img src="../public\assets\img\t1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 3</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <img src="../public\assets\img\t1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 4</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <img src="../public\assets\img\t1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 5</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <img src="../public\assets\img\t1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 6</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
+
+
+
+            {{-- ------------------ --}}
         </div>
     </div>
 @endsection
 @section('customjs')
+    <script>
+
+    </script>
 @endsection
