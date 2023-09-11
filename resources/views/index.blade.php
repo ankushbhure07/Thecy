@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('title')
-Customization & You - Nara, Jaripatka Nagpur
+    Customization & You
 @endsection
 @section('customcss')
     <style>
@@ -41,6 +41,18 @@ Customization & You - Nara, Jaripatka Nagpur
             margin: 4px !important;
         }
 
+        @media (max-width: 320px) {
+            .showcase .showcase-text {
+                padding: 0.5rem !important;
+            }
+            .item-font {
+                font-size: 6px;
+            }
+            #rs {
+                font-size: 16px !important;
+            }
+        }
+
         @media (max-width: 1024px) {
             .item-font {
                 font-size: 19px;
@@ -56,7 +68,6 @@ Customization & You - Nara, Jaripatka Nagpur
                 padding: 0;
             }
         }
-       
     </style>
 @endsection
 @section('content')
@@ -144,7 +155,7 @@ Customization & You - Nara, Jaripatka Nagpur
         </div>
     </section>
     <!-- Image Showcases-->
-    <section class="showcase">  
+    <section class="showcase">
         <h1 class="mt-3 mb-4 text-center" style="font-weight: 600; color:#956943;">Some of our Products</h1>
         <div class="container-fluid p-0" id="images" style="width: 90%;">
             <div class="row g-0">
@@ -164,7 +175,7 @@ Customization & You - Nara, Jaripatka Nagpur
                         <hr>
                         <div class="row">
                             <div class="col-md-6">
-                                <h4 class="mb-0" style="font-weight: 400">₹ {{ $item->product_price }}</h4>
+                                <h4 class="mb-0" style="font-weight: 400" id="rs">₹ {{ $item->product_price }}</h4>
                             </div>
                         </div>
                     </div>

@@ -59,7 +59,13 @@
 
         @media (max-width: 1024px) {
             .item-font {
-                font-size: 19px;
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .item-font {
+                font-size: 13px;
             }
         }
 
