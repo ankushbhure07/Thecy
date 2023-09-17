@@ -52,6 +52,14 @@
             margin: 1px !important;
         }
 
+        #afterSmall {
+            display: none;
+            position: fixed;
+            height: 100px;
+            bottom: 0;
+            width: 100%;
+        }
+
         .showcase-text span {
             font-size: 15px;
             font-weight: 400;
@@ -66,6 +74,14 @@
         @media (max-width: 768px) {
             .item-font {
                 font-size: 13px;
+            }
+
+            .afterSmall {
+                display: none;
+            }
+
+            #afterSmall {
+                display: block;                
             }
         }
 
@@ -92,11 +108,45 @@
             </div>
         </div>
     </header>
+    {{-- after small screen --}}
+    <div class="row bg-dark" id="afterSmall">
+        <div class="col-md-6">
+            <select class="form-select form-select-sm col-md-12 col-12 w-100">
+                <option checked="checked" value="DEFAULT">Sort</option>
+                <option value="A2Z">A to Z</option>
+                <option value="PRICE_H2L">Price-High to Low</option>
+                <option value="PRICE_L2H">Price-Low to High</option>
+                <option value="LATEST">Newest</option>
+                <option value="POPULARITY">Popularity</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary w-100">
+                Filters
+            </button>           
+
+            {{-- <div class="mb-3">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 mb-3">
+                        <button type="button" class="btn btn-outline-primary w-100">Apply</button>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <button type="button" class="btn btn-outline-primary w-100">Clear</button>
+                    </div>
+                </div>
+            </div> --}}
+        </div>
+    </div>
+    {{-- after small screen --}}
     <div class="container plisting fullWidth">
         <div class="container plisting fullWidth p-0">
             <div class="d-flex justify-content-end ">
                 <div class="col-lg-9 col-md-8  pro-list">
-                    <div class="breadcrumbcustome">
+
+
+
+                    <div class="breadcrumbcustome afterSmall">
                         <div class="row justify-content-between align-items-end align-items-lg-center">
                             <header class="col-lg-6 col-md-6 col-12">
                                 <h1 class="list-header">All Items
@@ -124,7 +174,7 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-3 col-md-4 col-12 filterCol">
+                <div class="col-3 col-lg-3 col-md-12 col-12 filterCol afterSmall">
                     <div class="mb-3">
                         <label class="">Products</label>
                         <select class="form-select form-select-sm" name="" id="" onfocus="this.size=4;"
@@ -139,23 +189,17 @@
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label class="">Products</label>
-                        <select class="form-select form-select-sm" name="" id="">
-                            <option selected>Prices</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
                         <div class="row">
-                            <div class="col-md-6 col-sm-6 col-6">
+                            <div class="col-md-6 col-sm-6 mb-3">
                                 <button type="button" class="btn btn-outline-primary w-100">Apply</button>
                             </div>
-                            <div class="col-md-6 col-sm-6 col-6">
+                            <div class="col-md-6 col-sm-6">
                                 <button type="button" class="btn btn-outline-primary w-100">Clear</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-9 col-md-8 col-12 pro-list mb-5">
+                <div class="col-9 col-lg-9 col-md-12 col-12 pro-list mb-5">
                     <div class="row">
                         @foreach ($product as $item)
                             <div class="col-6 col-md-4 col-lg-3 order-lg-1 showcase-text" style="margin-bottom: 25px">
