@@ -81,7 +81,7 @@
             }
 
             #afterSmall {
-                display: block;                
+                display: block;
             }
         }
 
@@ -110,23 +110,24 @@
     </header>
     {{-- after small screen --}}
     <div class="row bg-dark" id="afterSmall">
-        <div class="col-md-6">
-            <select class="form-select form-select-sm col-md-12 col-12 w-100">
-                <option checked="checked" value="DEFAULT">Sort</option>
-                <option value="A2Z">A to Z</option>
-                <option value="PRICE_H2L">Price-High to Low</option>
-                <option value="PRICE_L2H">Price-Low to High</option>
-                <option value="LATEST">Newest</option>
-                <option value="POPULARITY">Popularity</option>
-            </select>
-        </div>
-        <div class="col-md-6">
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary w-100">
-                Filters
-            </button>           
+        <div class="d-flex">
+            <div class="col-md-6">
+                <select class="form-select w-100">
+                    <option checked="checked" value="DEFAULT">Sort</option>
+                    <option value="A2Z">A to Z</option>
+                    <option value="PRICE_H2L">Price-High to Low</option>
+                    <option value="PRICE_L2H">Price-Low to High</option>
+                    <option value="LATEST">Newest</option>
+                    <option value="POPULARITY">Popularity</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary w-100">
+                    Filters
+                </button>
 
-            {{-- <div class="mb-3">
+                {{-- <div class="mb-3">
                 <div class="row">
                     <div class="col-md-6 col-sm-6 mb-3">
                         <button type="button" class="btn btn-outline-primary w-100">Apply</button>
@@ -136,6 +137,7 @@
                     </div>
                 </div>
             </div> --}}
+            </div>
         </div>
     </div>
     {{-- after small screen --}}
@@ -143,30 +145,13 @@
         <div class="container plisting fullWidth p-0">
             <div class="d-flex justify-content-end ">
                 <div class="col-lg-9 col-md-8  pro-list">
-
-
-
                     <div class="breadcrumbcustome afterSmall">
                         <div class="row justify-content-between align-items-end align-items-lg-center">
                             <header class="col-lg-6 col-md-6 col-12">
                                 <h1 class="list-header">All Items
-                                    <span class="title-count" style="color: rgb(135, 139, 148);"> - </span>
+                                    {{-- <span class="title-count" style="color: rgb(135, 139, 148);"> - </span> --}}
                                 </h1>
                             </header>
-                            <div class="w-full" style="max-width: 235px;">
-                                <div id="sort" class="filteroptionsModal">
-                                    <div title="sort" class="">
-                                        <select class="form-select form-select-sm col-md-12 col-12">
-                                            <option checked="checked" value="DEFAULT">Select Sorting Options</option>
-                                            <option value="A2Z">A to Z</option>
-                                            <option value="PRICE_H2L">Price-High to Low</option>
-                                            <option value="PRICE_L2H">Price-Low to High</option>
-                                            <option value="LATEST">Newest</option>
-                                            <option value="POPULARITY">Popularity</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="row filter-chips-wrap pt-2"></div>
                     </div>
@@ -175,6 +160,21 @@
 
             <div class="row">
                 <div class="col-3 col-lg-3 col-md-12 col-12 filterCol afterSmall">
+                    <div class="mb-3 w-100">
+                        <div id="sort" class="filteroptionsModal">
+                            <div title="sort" class="">
+                                <select class="form-select form-select-sm col-md-12 col-12">
+                                    <option checked="checked" value="DEFAULT">Select Sorting Options</option>
+                                    <option value="A2Z">A to Z</option>
+                                    <option value="PRICE_H2L">Price-High to Low</option>
+                                    <option value="PRICE_L2H">Price-Low to High</option>
+                                    <option value="LATEST">Newest</option>
+                                    <option value="POPULARITY">Popularity</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="mb-3">
                         <label class="">Products</label>
                         <select class="form-select form-select-sm" name="" id="" onfocus="this.size=4;"
