@@ -217,11 +217,22 @@
                                     </div>
                                     <div class="col-md-2">
                                         <div class="mb-3">
-                                            <img src="../../product_image/{{ $update->product_image }}" alt=""
+                                            <img src="../../public/product_image/{{ $update->product_image }}" alt=""
                                                 style="width: 8rem;">
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <div class="mb-3">
+                                                <label for="" class="form-label">Product Details</label>
+                                                <textarea class="form-control" name="product_details" id="" rows="3">{{ $update->product_details }}</textarea>
+                                                @error('product_details')
+                                                <span class="text-danger">{{ $message }}</span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
                                         <button type="submit" class="btn btn-warning">Update</button>
                                         <a href="{{ route('product.index') }}" class="btn btn-outline-warning">Back</a>
                                     </div>

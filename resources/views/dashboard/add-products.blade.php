@@ -47,12 +47,18 @@
                                             <select class="form-control" name="product_type" id="tagInput">
                                                 {{-- <option Selected> </option> --}}
                                                 <option disabled selected>Choose The Item</option>
-                                                <option value="Upper" @if(old('product_type') == 'Upper') selected @endif>Upper wear</option>
-                                                <option value="Lower" @if(old('product_type') == 'Lower') selected @endif>Lower</option>
-                                                <option value="Head" @if(old('product_type') == 'Head') selected @endif>Head wear</option>
-                                                <option value="Gifting" @if(old('product_type') == 'Gifting') selected @endif>Gifting Item</option>
-                                                <option value="Personalized" @if(old('product_type') == 'Personalized') selected @endif>Personalized</option>
-                                                <option value="Professional" @if(old('product_type') == 'Professional') selected @endif>Professional</option>
+                                                <option value="Upper" @if (old('product_type') == 'Upper') selected @endif>
+                                                    Upper wear</option>
+                                                <option value="Lower" @if (old('product_type') == 'Lower') selected @endif>
+                                                    Lower</option>
+                                                <option value="Head" @if (old('product_type') == 'Head') selected @endif>
+                                                    Head wear</option>
+                                                <option value="Gifting" @if (old('product_type') == 'Gifting') selected @endif>
+                                                    Gifting Item</option>
+                                                <option value="Personalized"
+                                                    @if (old('product_type') == 'Personalized') selected @endif>Personalized</option>
+                                                <option value="Professional"
+                                                    @if (old('product_type') == 'Professional') selected @endif>Professional</option>
                                             </select>
                                             @error('product_type')
                                                 <span class="text-danger">{{ $message }}</span>
@@ -115,7 +121,7 @@
                                                 <input class="form-check-input" type="radio" name="gender"
                                                     value="U">
                                                 <label class="form-check-label ml-0" for="">Unisex</label>
-                                            </div>                                           
+                                            </div>
                                         </div>
                                     </div>
                                     {{-- <div class="col-md-3">
@@ -143,7 +149,7 @@
                                     <div class="col-md-4">
                                         <div class="mb-3">
                                             <div class="mb-3">
-                                                <label for="" class="form-label">Description</label>
+                                                <label for="" class="form-label">Product Description</label>
                                                 <textarea class="form-control" name="product_desc" id="" rows="3"></textarea>
                                                 @error('product_desc')
                                                     <span class="text-danger">{{ $message }}</span>
@@ -163,7 +169,18 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <div class="mb-3">
+                                                <label for="" class="form-label">Product Details</label>
+                                                <textarea class="form-control" name="product_details" id="" rows="3"></textarea>
+                                                @error('product_details')
+                                                <span class="text-danger">{{ $message }}</span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8" style="margin-top: 32px;">
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                         <a href="{{ route('product.index') }}" class="btn btn-outline-primary">Back</a>
                                     </div>

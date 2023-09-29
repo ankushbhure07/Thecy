@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('gender')->nullable();
             $table->string('product_color')->nullable();
             $table->string('product_desc');
+            $table->string('product_details');
             $table->string('product_image');
             $table->timestamps();
         });

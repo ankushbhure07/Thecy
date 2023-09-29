@@ -107,7 +107,7 @@
                                                     style="background: {{ $pro->product_color }};"></button></td>
                                             <td>{{ $pro->product_desc }}</td>
                                             <td>
-                                                <img src="product_image/{{ $pro->product_image }}" alt=""
+                                                <img src="public/product_image/{{ $pro->product_image }}" alt=""
                                                     style="width: 50px;">
                                             </td>
                                             <td>

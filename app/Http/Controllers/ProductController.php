@@ -36,6 +36,7 @@ class ProductController extends Controller
             'product_type' => 'required',
             'product_image' => 'required',
             'product_desc' => 'required',
+            'product_details' => 'required',
         ]);        
         $sizes = $request->product_size;
         $sizesObject = json_encode($sizes);        
@@ -50,6 +51,7 @@ class ProductController extends Controller
         $store->gender = $request->gender;
         $store->product_color = $request->product_color;
         $store->product_desc = $request->product_desc;
+        $store->product_details = $request->product_details;
 
         $image = $request->file('product_image');
         // dd($image);
@@ -95,6 +97,7 @@ class ProductController extends Controller
             'product_price' => 'required|numeric',
             'product_type' => 'required',        
             'product_desc' => 'required',
+            'product_details' => 'required',
         ]);     
         // dd($request->all());       
         $update = Product::findorfail($id);
@@ -112,6 +115,7 @@ class ProductController extends Controller
         $update->gender = $request->gender;
         $update->product_color = $request->product_color;
         $update->product_desc = $request->product_desc;
+        $update->product_details = $request->product_details;
 
         $image = $request->file('product_image');
         if ($image != '') {

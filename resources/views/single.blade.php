@@ -315,13 +315,13 @@
                                 </div>
                             </div>
                             <div class="mt-5 mb-5">
-                                <p class="delivery-details-txt">Delivery Details</p>
+                                {{-- <p class="delivery-details-txt">Delivery Details</p>
                                 <div class="input-group mb-3">
                                     <input type="number" class="form-control" placeholder="Enter Pincode" minlength="6"
                                         maxlength="6">
                                     <button class="btn btn-outline-primary" type="button"
                                         id="button-addon2">Button</button>
-                                </div>
+                                </div> --}}
                             </div>
 
                             {{-- <div class="mtb15 w100 mr-0">
