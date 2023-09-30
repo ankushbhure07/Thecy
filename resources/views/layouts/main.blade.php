@@ -20,7 +20,7 @@
 
         .navbar,
         .navbar a {
-            color: #956943 !important;
+            color: #000000 !important;
 
         }
 
@@ -38,29 +38,29 @@
         }
 
         a:hover {
-            color: #c89364;
+            color: #ff1b1b;
             transition: 0.25s ease-in-out;
         }
 
         .form-select:focus {
-            border-color: #d5b9a1;
+            border-color: none;
             outline: 0;
-            box-shadow: 0 0 0 0.25rem #ffdbbb;
+            /* box-shadow: 0 0 0 0.25rem #ff1b1b; */
         }
 
         option:checked,
         option:hover {
-            background-color: #956943;
-            box-shadow: 0 0 10px 100px #d5b9a1 inset;
+            /* background-color: #f5785c; */
+            /* box-shadow: 0 0 10px 100px #ff1b1b inset; */
         }
 
         .accordion {
-            --bs-accordion-btn-focus-border-color: #956943;
-            --bs-accordion-body-padding-x: 1.25rem;
+            --bs-accordion-btn-focus-border-color: #ff1b1b;
+            --bs-accordion-body-padding-x: 1.25rem; 
             --bs-accordion-body-padding-y: 1rem;
             --bs-accordion-active-color: #ffffff;
             --bs-accordion-active-color: #ffffff;
-            --bs-accordion-active-bg: #956943;
+            --bs-accordion-active-bg: #ff1b1b;
         }
 
         .accordion {
@@ -99,10 +99,10 @@
     </style>
 </head>
 
-<body style="background-color:#fffffc;">
+<body>
 
 
-    <div class="container">
+    <div class="container" style="border-bottom: 3px solid black; margin-bottom: 25px;">
         <nav class="navbar navbar-expand-sm">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{{ url('/') }}" style="font-weight:600;font-size: 1.5rem;">CandY</a>
@@ -146,7 +146,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('contact.index') }}">Contact Us</a>
                             </li>
-                        </ul>
+                        </ul>                 
                     </div>
                 </div>
             </div>
@@ -163,13 +163,9 @@
             <div class="row">
                 <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
                     <ul class="list-inline mb-2">
-                        <li class="list-inline-item">
-                            <a class="nav-link" href="{{ url('/') }}" aria-current="page">Home</a>
-                        </li>
+                        <li class="list-inline-item"><a href="{{ url('/') }}" aria-current="page">Home</a></li>
                         <li class="list-inline-item">⋅</li>
-                        <li class="list-inline-item">
-                            <a class="nav-link" href="{{ url('/services') }}">Services</a>
-                        </li>
+                        <li class="list-inline-item"><a href="{{ url('/services') }}">Services</a></li>
                         <li class="list-inline-item">⋅</li>
                         <li class="list-inline-item"><a href="{{ url('/about') }}">About</a></li>
                         <li class="list-inline-item">⋅</li>

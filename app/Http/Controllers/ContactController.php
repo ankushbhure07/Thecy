@@ -32,6 +32,9 @@ class ContactController extends Controller
             'name' => 'required',
             'email' => 'required|email',
             'number' => 'required|numeric',
+            'fabric' => 'required',
+            'inquiry' => 'required',
+            'canwecall' => 'required',
         ]);
         // dd($request);
         
@@ -39,6 +42,9 @@ class ContactController extends Controller
         $store->name = $request->name;
         $store->email = $request->email;
         $store->number = $request->number;
+        $store->fabric = $request->fabric;
+        $store->inquiry = $request->inquiry;
+        $store->canwecall = $request->canwecall;
 
         $store->save();
 

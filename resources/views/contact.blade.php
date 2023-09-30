@@ -99,29 +99,34 @@
 
         .details {
             margin: 6rem 0 4rem 0;
-        } 
+        }
 
         .details .fa-solid {
             font-size: 1.6rem;
         }
-        #submitBtn{
+
+        #submitBtn {
             text-align: left;
             margin-top: auto;
         }
+
         @media screen and (max-width: 761px) {
-            #submitBtn{
+            #submitBtn {
                 text-align: center;
                 margin-top: auto;
-            }  
-            #name{
+            }
+
+            #name {
                 margin-bottom: 1rem;
-            }          
-            #mobileNo{
+            }
+
+            #mobileNo {
                 margin-bottom: 1rem;
-            }          
-            .det{
+            }
+
+            .det {
                 margin-bottom: 1rem;
-            }          
+            }
         }
     </style>
 @endsection
@@ -166,10 +171,10 @@
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">                       
+                    <div class="modal-content">
                         <div class="modal-body">
                             Thankyou For Contacting we will contact you soon...
-                        </div>                       
+                        </div>
                     </div>
                 </div>
             </div>
@@ -184,20 +189,20 @@
                     {{ session('fail') }}
                 </div>
             @endif
-            <form action="{{ route('contact.store') }}" method="POST">
+            <form action="{{ route('contact.store') }}" method="POST" style="margin-bottom: 2rem;">
                 @csrf
                 <div class="row">
                     <div class="row mb-3">
                         <div class="col-md-6" id="name">
-                            {{-- <label for="name" class="form-label">Name</label> --}}
-                            <input type="text" name="name" class="form-control" value="{{ old('name') }}" placeholder="Name">
+                            <input type="text" name="name" class="form-control" value="{{ old('name') }}"
+                                placeholder="Name">
                             @error('name')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
                         <div class="col-md-6">
-                            {{-- <label for="email" class="form-label">Email</label> --}}
-                            <input type="email" name="email" class="form-control" value="{{ old('email') }}" placeholder="Email">
+                            <input type="email" name="email" class="form-control" value="{{ old('email') }}"
+                                placeholder="Email">
                             @error('email')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
@@ -205,23 +210,55 @@
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-6" id="mobileNo">
-                            {{-- <label for="phone" class="form-label">Mobile Number</label> --}}
-                            <input type="number" name="number" class="form-control" value="{{ old('number') }}" placeholder="Mobile Number">
+                            <input type="number" name="number" class="form-control" value="{{ old('number') }}"
+                                placeholder="Mobile Number">
                             @error('number')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
-                        <div class="col-md-6" id="submitBtn">
-                            <button type="submit" class="btn btn-primary" id="formSubmit">Submit</button>
+                        <div class="col-md-6" id="">
+                            <select class="form-select" name="fabric" id="">
+                                <option selected>Select Types of tshirt</option>
+                                <option value="cotton">Pure Cotton(100%)</option>
+                                <option value="polystar">Polystar</option>
+                                <option value="mix">Mix Matrial</option>
+                                <option value="spunMatty">Spun Matty</option>
+                            </select>
+                            @error('fabric')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6" id="">
+                            <textarea class="form-control" name="inquiry" id="" rows="3" placeholder="Inquiry for??"></textarea>
+                            @error('inquiry')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
+                        <div class="col-md-6">
+                            <label for="" class="form-label">Can We Call??</label>
+                            <div class="mb-3 d-flex">
+                                <div class="form-check" style="margin-right: 30px;">
+                                    <input class="form-check-input" type="radio" name="canwecall" value="yes">
+                                    <label class="form-check-label ml-0" for="">Yes</label>
+                                </div>
+                                <div class="form-check" style="margin-right: 35px;">
+                                    <input class="form-check-input" type="radio" name="canwecall" value="no">
+                                    <label class="form-check-label ml-0" for="">No</label>
+                                </div>
+                            </div>
+                            @error('canwecall')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
                 </div>
+                <button type="submit" class="btn btn-primary" id="formSubmit">Submit</button>
             </form>
         </div>
     </div>
 @endsection
 @section('customjs')
-<script>
-    
-</script>
+    <script></script>
 @endsection

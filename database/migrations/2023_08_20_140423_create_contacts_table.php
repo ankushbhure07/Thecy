@@ -16,6 +16,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('number');
+            $table->string('fabric');
+            $table->string('inquiry');
+            $table->string('canwecall');
             $table->timestamps();
         });
     }

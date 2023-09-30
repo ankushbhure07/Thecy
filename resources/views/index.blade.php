@@ -45,13 +45,16 @@
             .showcase .showcase-text {
                 padding: 0.5rem !important;
             }
+
             .item-font {
                 font-size: 6px;
             }
+
             #rs {
                 font-size: 16px !important;
             }
-            #allItems a{
+
+            #allItems a {
                 font-size: 1.8rem;
             }
         }
@@ -70,6 +73,33 @@
             .col-6 {
                 padding: 0;
             }
+        }
+
+        .fa-star {
+            color: #ff1b1b;
+            font-size: 3.5rem;
+        }
+
+        .pro {
+            padding-right: 6px;
+            box-shadow: 8px 8px 0px 0px #ff1b1b;
+        }
+
+        .circle-icon {
+            font-size: 1.2rem;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #000000;            
+            transition: 0.2s ease-in-out;
+        }
+
+        .circle-icon:hover {
+            color: #ff1b1b;
+            border: 2px solid #ff1b1b;
         }
     </style>
 @endsection
@@ -150,7 +180,7 @@
                 <div class="col-lg-4">
                     <div class="features-icons-item mx-auto mb-0 mb-lg-3">
                         <div class="features-icons-icon d-flex"><i class="bi-terminal m-auto"></i></div>
-                        <h3>Price</h3>
+                        <h3>cost-effective</h3>
                         <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
                     </div>
                 </div>
@@ -159,7 +189,8 @@
     </section>
     <!-- Image Showcases-->
     <section class="showcase">
-        <h1 class="mt-3 mb-4 text-center" style="font-weight: 600; color:#956943;">Some of our Products</h1>
+        <h1 class="mt-3 mb-4 text-center" style="font-weight: 600; color:#000000;"><strong>Some of our </strong><span
+                class="pro">Products</span></h1>
         <div class="container-fluid p-0" id="images" style="width: 90%;">
             <div class="row g-0">
                 @foreach ($product as $item)
@@ -185,10 +216,53 @@
                 @endforeach
             </div>
         </div>
-        <div class="container text-center mt-5 mb-5" id="allItems">
+        {{-- <div class="container text-center mt-5 mb-5" id="allItems">
             <a href="{{ url('/items') }}">All Items <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
+        </div> --}}
     </section>
+
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 style="font-size: 6rem; color: black; margin-bottom: 2rem;"> <strong>Our <br> Services</strong></h1>
+                <p style="color: rgb(62, 59, 59);">We offer high-quality, cost-effective products that suit your brand
+                    identity.</p>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-4 text-center mt-4" style="border-right: 4px solid black;">
+                        <i class="fa-regular fa-star"></i><br><br>
+                        <h3>Product Quality</h3>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In corporis sequi atque.</p>
+                        {{-- <div class="circle-icon">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div> --}}
+                    </div>
+                    <div class="col-4 text-center mt-4" style="border-right: 4px solid black;">
+                        <i class="fa-regular fa-star"></i><br><br>
+                        <h3>Product Quality</h3>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In corporis sequi atque.</p>
+                        {{-- <div class="circle-icon">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div> --}}
+                    </div>
+                    <div class="col-4 text-center mt-4">
+                        <i class="fa-regular fa-star"></i><br><br>
+                        <h3>Product Quality</h3>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In corporis sequi atque.</p>
+                        {{-- <div class="circle-icon">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div> --}}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Testimonials-->
     <section class="testimonials text-center bg-light">
         <div class="container">
