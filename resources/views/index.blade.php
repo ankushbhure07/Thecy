@@ -264,7 +264,7 @@
     </div>
 
     <!-- Testimonials-->
-    <section class="testimonials text-center bg-light">
+    <section class="testimonials text-center">
         <div class="container">
             <h2 class="mb-5">What people are saying...</h2>
             <div class="row">
@@ -298,7 +298,7 @@
         </div>
     </section>
     <!-- Call to Action-->
-    <section class="call-to-action text-white text-center" id="signup">
+    {{-- <section class="call-to-action text-white text-center" id="signup">
         <div class="container position-relative">
             <div class="row justify-content-center">
                 <div class="col-xl-6">
@@ -334,7 +334,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 @endsection
 
 @section('footer')

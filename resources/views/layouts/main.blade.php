@@ -56,7 +56,7 @@
 
         .accordion {
             --bs-accordion-btn-focus-border-color: #ff1b1b;
-            --bs-accordion-body-padding-x: 1.25rem; 
+            --bs-accordion-body-padding-x: 1.25rem;
             --bs-accordion-body-padding-y: 1rem;
             --bs-accordion-active-color: #ffffff;
             --bs-accordion-active-color: #ffffff;
@@ -95,6 +95,14 @@
             #navv {
                 /* width: 100%; */
             }
+        }
+        .footerHeading{
+            color: #ff1b1b;
+        }
+        .footerUi{
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
     </style>
 </head>
@@ -146,7 +154,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('contact.index') }}">Contact Us</a>
                             </li>
-                        </ul>                 
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -158,7 +166,8 @@
     <main>
         @yield('content')
     </main>
-    <footer class="footer bg-light">
+
+    {{-- <footer class="footer bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
@@ -188,7 +197,59 @@
                 </div>
             </div>
         </div>
+    </footer> --}}
+
+    <footer class="footer bg-light">
+        <div class="container ">
+            <div class="row">
+                <div class="col-6 col-md-3 col-xs-6">
+                    <div class="footerlinks">
+                        <h5 class="footerHeading">NEED HELP</h5>
+                        <ul class="footerUi mb-2">
+                            <li class=""><a href="{{ url('/') }}" aria-current="page">Home</a></li>
+                            <li class=""><a href="{{ url('/services') }}">Services</a></li>
+                            <li class=""><a href="{{ url('/about') }}">About</a></li>
+                            <li class=""><a href="{{ route('contact.index') }}">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>                           
+                <div class="col-6 col-md-3 col-xs-6">
+                    <div class="footerlinks">
+                        <h5 class="footerHeading">NEED HELP</h5>
+                        <ul class="footerUi mb-2">
+                            <li class=""><a href="{{ url('/') }}" aria-current="page">Home</a></li>
+                            <li class=""><a href="{{ url('/services') }}">Services</a></li>
+                            <li class=""><a href="{{ url('/about') }}">About</a></li>
+                            <li class=""><a href="{{ route('contact.index') }}">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>                           
+                <div class="col-6 col-md-3 col-xs-6">
+                    <div class="footerlinks">
+                        <h5 class="footerHeading">NEED HELP</h5>
+                        <ul class="footerUi mb-2">
+                            <li class=""><a href="{{ url('/') }}" aria-current="page">Home</a></li>
+                            <li class=""><a href="{{ url('/services') }}">Services</a></li>
+                            <li class=""><a href="{{ url('/about') }}">About</a></li>
+                            <li class=""><a href="{{ route('contact.index') }}">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>                           
+                <div class="col-6 col-md-3 col-xs-6">
+                    <div class="footerlinks">
+                        <h5 class="footerHeading">NEED HELP</h5>
+                        <ul class="footerUi mb-2">
+                            <li class=""><a href="{{ url('/') }}" aria-current="page">Home</a></li>
+                            <li class=""><a href="{{ url('/services') }}">Services</a></li>
+                            <li class=""><a href="{{ url('/about') }}">About</a></li>
+                            <li class=""><a href="{{ route('contact.index') }}">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>                           
+            </div>
+        </div>
     </footer>
+
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
