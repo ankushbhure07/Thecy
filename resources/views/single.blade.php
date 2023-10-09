@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="cs/css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -84,90 +93,11 @@
             padding: 0;
         }
 
-        .sizelist li {}
-
-        /* --------------------- */
-        /* a {
-                                            -webkit-transition: 0.3s all ease;
-                                            -o-transition: 0.3s all ease;
-                                            transition: 0.3s all ease;
-                                        }
-
-                                        a,
-                                        a:hover {
-                                            text-decoration: none !important;
-                                        }
-
-                                        .content {
-                                            padding: 7rem 0;
-                                        }
-
-                                        h2 {
-                                            font-size: 20px;
-                                        }
-
-                                        .bg-left-half {
-                                            position: relative;
-                                        }
-
-                                        .bg-left-half:before {
-                                            position: absolute;
-                                            width: 50%;
-                                            height: 100%;
-                                            z-index: -1;
-                                            content: "";
-                                            left: 0;
-                                            top: 0;
-                                            background-color: #f8f9fa;
-                                        }
-
-                                        .media-29101 img {
-                                            margin-bottom: 20px;
-                                        }
-
-                                        .media-29101 h3 {
-                                            font-size: 18px;
-                                            font-weight: 900 !important;
-                                        }
-
-                                        .media-29101 h3 a {
-                                            color: #6c757d;
-                                        }
-
-                                        .owl-2-style .owl-nav {
-                                            display: none;
-                                        }
-
-                                        .owl-2-style .owl-dots {
-                                            text-align: center;
-                                            position: relative;
-                                            bottom: -30px;
-                                        }
-
-                                        .owl-2-style .owl-dots .owl-dot {
-                                            display: inline-block;
-                                        }
-
-                                        .owl-2-style .owl-dots .owl-dot span {
-                                            display: inline-block;
-                                            width: 15px;
-                                            height: 3px;
-                                            border-radius: 0px;
-                                            background: #cccccc;
-                                            -webkit-transition: 0.3s all cubic-bezier(0.32, 0.71, 0.53, 0.53);
-                                            -o-transition: 0.3s all cubic-bezier(0.32, 0.71, 0.53, 0.53);
-                                            transition: 0.3s all cubic-bezier(0.32, 0.71, 0.53, 0.53);
-                                            margin: 3px;
-                                        }
-
-                                        .owl-2-style .owl-dots .owl-dot.active span {
-                                            background: #007bff;
-                                        }
-
-                                        .owl-2-style .owl-dots .owl-dot:active,
-                                        .owl-2-style .owl-dots .owl-dot:focus {
-                                            outline: none;
-                                        } */
+        .card-img-top {
+            width: 100%;
+            border-top-left-radius: calc(.25rem - 1px);
+            border-top-right-radius: calc(.25rem - 1px);
+        }
 
         @media screen and (min-width:576px) {
             .carousel-inner {
@@ -315,62 +245,7 @@
                                 </div>
                             </div>
                             <div class="mt-5 mb-5">
-                                {{-- <p class="delivery-details-txt">Delivery Details</p>
-                                <div class="input-group mb-3">
-                                    <input type="number" class="form-control" placeholder="Enter Pincode" minlength="6"
-                                        maxlength="6">
-                                    <button class="btn btn-outline-primary" type="button"
-                                        id="button-addon2">Button</button>
-                                </div> --}}
                             </div>
-
-                            {{-- <div class="mtb15 w100 mr-0">
-                                <div id="accordion" role="tablist" aria-multiselectable="true" class="accordiontabs">
-                                    <div class="card">
-                                        <div role="tab" id="headingOne" class="card-header">
-                                            <h5 class="mb-0 accordianheading">
-                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
-                                                    aria-expanded="true" aria-controls="collapseOne">
-                                                    Product Details
-                                                </a>
-                                            </h5>
-                                        </div>
-
-                                        <div id="collapseOne" aria-expanded="false" role="tabpanel"
-                                            aria-labelledby="headingOne" class="collapse show">
-                                            <div class="card-block">
-                                                <p>
-                                                <div><b>Material &amp; Care:<br></b>Premium Heavy Gauge Fabric</div>
-                                                <div>
-                                                    100% Cotton&nbsp;<br>Machine Wash<br>
-                                                    <span><br><span><b>Manufactured &amp; Sold By:</b>
-                                                        </span><br>text<br>
-                                                        <a
-                                                            target="_blank"rel="Mailto:connect@candy.com">connect@candy.com</a>
-                                                </div>
-                                            </div>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div role="tab" id="headingTwo" class="card-header">
-                                        <h5 class="mb-0 accordianheading"><a data-toggle="collapse"
-                                                data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
-                                                aria-controls="collapseTwo" class="collapsed">
-                                                Product Description
-                                            </a></h5>
-                                    </div>
-                                    <div id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo" class="collapse">
-                                        <div class="card-block">
-                                            <p><span><b>Official Licensed Naruto
-                                                        Merchandise.<br><br></b><span>Shop for Naruto: Hokage at The
-                                                        Souled Store.<br></span><b><br></b>MRP: Rs. 1499/- incl. of all
-                                                    taxes.<b><br></b></span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> --}}
 
                             <div class="accordion" id="accordionExample">
                                 <div class="accordion-item">
@@ -413,132 +288,76 @@
 
             <h1 class="text-center mb-5 mt-5"> Product Slider</h1>
 
-
-            {{-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner" style="justify-content: center;">
-                    <div class="carousel-item active">
-                        <div class="row d-flex">
-                            @foreach ($limitedRows as $item)
-                                <div class="col-xs-12 col-sm-6 col-md-2">
-                                    <a href="{{ route('single', $item->id) }}"><img
-                                            src="../public//product_image/{{ $item->product_image }}" style="width: 100%;"
-                                            alt=""></a>
-                                    <p class="text-center"> <b> {{ $item->product_name }} </b></p>
-                                    <p class="text-center">₹ {{ $item->product_price }} </p>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row d-flex">
-                            @foreach ($limitedRows as $item)
-                                <div class="col-xs-12 col-sm-6 col-md-2">
-                                    <a href="{{ route('single', $item->id) }}"><img
-                                            src="../public/product_image/{{ $item->product_image }}" style="width: 100%;"
-                                            alt=""></a>
-                                    <p class="text-center"> <b> {{ $item->product_name }} </b></p>
-                                    <p class="text-center">₹ {{ $item->product_price }} </p>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div> --}}
-            {{-- <img src="../public\assets\img\t1.jpg" alt=""> --}}
-
-            {{-- ------------------ --}}
-
-
-            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="card">
-                            <img src="../public\assets\img\t1.jpg" class="card-img-top" alt="...">
+            <div class="container">
+                <div class="card-slider">
+                    <div class="col-lg-12 me-2">
+                        <div class="card w-100">
+                            <img class="card-img-top" src="https://picsum.photos/seed/picsum/200/200"
+                                alt="Card image cap">
                             <div class="card-body">
-                                <h5 class="card-title">Card title 1</h5>
+                                <h5 class="card-title">Card title</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
+                                    bulk of
+                                    the card's content.</p>
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="col-lg-12 me-2">
                         <div class="card">
-                            <img src="../public\assets\img\t1.jpg" class="card-img-top" alt="...">
+                            <img class="card-img-top" src="https://picsum.photos/seed/picsum/200/200"
+                                alt="Card image cap">
                             <div class="card-body">
-                                <h5 class="card-title">Card title 2</h5>
+                                <h5 class="card-title">Card title</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
+                                    bulk of
+                                    the card's content.</p>
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="card">
-                            <img src="../public\assets\img\t1.jpg" class="card-img-top" alt="...">
+                    <div class="col-lg-12 me-2">
+                        <div class="card w-100">
+                            <img class="card-img-top img-fluid" src="https://picsum.photos/seed/picsum/200/200"
+                                alt="Card image cap">
                             <div class="card-body">
-                                <h5 class="card-title">Card title 3</h5>
+                                <h5 class="card-title">Card title</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
+                                    bulk of
+                                    the card's content.</p>
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="card">
-                            <img src="../public\assets\img\t1.jpg" class="card-img-top" alt="...">
+                    <div class="col-lg-12 me-2">
+                        <div class="card w-100">
+                            <img class="card-img-top" src="https://picsum.photos/seed/picsum/200/200"
+                                alt="Card image cap">
                             <div class="card-body">
-                                <h5 class="card-title">Card title 4</h5>
+                                <h5 class="card-title">Card title</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
+                                    bulk of
+                                    the card's content.</p>
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="card">
-                            <img src="../public\assets\img\t1.jpg" class="card-img-top" alt="...">
+                    <div class="col-lg-12 me-2">
+                        <div class="card w-100">
+                            <img class="card-img-top" src="https://picsum.photos/seed/picsum/200/200"
+                                alt="Card image cap">
                             <div class="card-body">
-                                <h5 class="card-title">Card title 5</h5>
+                                <h5 class="card-title">Card title</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card">
-                            <img src="../public\assets\img\t1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title 6</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
+                                    bulk of
+                                    the card's content.</p>
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
+
 
 
 
@@ -548,6 +367,40 @@
 @endsection
 @section('customjs')
     <script>
-
+            <!-- Slick Carousel JavaScript and your custom script -->
+            <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+            </script>
+        $(document).ready(function($) {
+            $(".card-slider").slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: true,
+                responsive: [{
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                        },
+                    },
+                    {
+                        breakpoint: 400,
+                        settings: {
+                            arrows: false,
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        },
+                    },
+                ],
+            });
+        });
     </script>
 @endsection

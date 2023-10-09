@@ -96,13 +96,61 @@
                 /* width: 100%; */
             }
         }
-        .footerHeading{
+
+        .footerHeading {
             color: #ff1b1b;
         }
-        .footerUi{
+
+        .footerlinks {
+            display: grid;
+            justify-content: center;
+        }
+        #footerLast{
+            display: grid;
+            justify-content: end;
+            
+        }
+        #footerFirst{
+            display: grid;
+            justify-content: start;
+        }
+
+        .footerUi {
             list-style: none;
             margin: 0;
             padding: 0;
+        }
+
+        .footerUi li a {
+            color: #58595b;
+            font-weight: 400;
+        }
+
+        .bg-light {
+            --bs-bg-opacity: 1;
+            background-color: #e6e7e8 !important;
+        }
+
+
+        .footer h6 {
+            color: rgb(67, 67, 67);
+        }
+
+        .footer p {
+            color: #58595b;
+        }
+
+        .populer a {
+            text-decoration: none;
+            color: #525964;
+        }
+
+        .populer a:after {
+            content: "|";
+            color: #525964;
+            padding-right: 3px;
+            top: 50%;
+            transform: translateY(-50%);
         }
     </style>
 </head>
@@ -113,7 +161,8 @@
     <div class="container" style="border-bottom: 3px solid black; margin-bottom: 25px;">
         <nav class="navbar navbar-expand-sm">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{{ url('/') }}" style="font-weight:600;font-size: 1.5rem;">CandY</a>
+                <a class="navbar-brand" href="{{ url('/') }}" style="font-weight:600;font-size: 1.5rem;">C<span
+                        style="color:#ff1b1b;">&</span>Y</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -200,11 +249,11 @@
     </footer> --}}
 
     <footer class="footer bg-light">
-        <div class="container ">
+        <div class="container">
             <div class="row">
                 <div class="col-6 col-md-3 col-xs-6">
-                    <div class="footerlinks">
-                        <h5 class="footerHeading">NEED HELP</h5>
+                    <div class="" id="footerFirst">
+                        <h5 class="footerHeading">NAVIGATION LINKS</h5>
                         <ul class="footerUi mb-2">
                             <li class=""><a href="{{ url('/') }}" aria-current="page">Home</a></li>
                             <li class=""><a href="{{ url('/services') }}">Services</a></li>
@@ -212,7 +261,7 @@
                             <li class=""><a href="{{ route('contact.index') }}">Contact</a></li>
                         </ul>
                     </div>
-                </div>                           
+                </div>
                 <div class="col-6 col-md-3 col-xs-6">
                     <div class="footerlinks">
                         <h5 class="footerHeading">NEED HELP</h5>
@@ -223,7 +272,7 @@
                             <li class=""><a href="{{ route('contact.index') }}">Contact</a></li>
                         </ul>
                     </div>
-                </div>                           
+                </div>
                 <div class="col-6 col-md-3 col-xs-6">
                     <div class="footerlinks">
                         <h5 class="footerHeading">NEED HELP</h5>
@@ -234,9 +283,9 @@
                             <li class=""><a href="{{ route('contact.index') }}">Contact</a></li>
                         </ul>
                     </div>
-                </div>                           
+                </div>
                 <div class="col-6 col-md-3 col-xs-6">
-                    <div class="footerlinks">
+                    <div class="" id="footerLast">
                         <h5 class="footerHeading">NEED HELP</h5>
                         <ul class="footerUi mb-2">
                             <li class=""><a href="{{ url('/') }}" aria-current="page">Home</a></li>
@@ -245,8 +294,40 @@
                             <li class=""><a href="{{ route('contact.index') }}">Contact</a></li>
                         </ul>
                     </div>
-                </div>                           
+                </div>
             </div>
+            <div class="row  mt-5">
+                <div class="col-6">
+                    <h6 class="">POPULAR SEARCHES</h6>
+                    <div class="d-flex">
+                        <div class="populer">
+                            <a href="#" class=""><span>Customized T-shirts</span></a>
+                            <a href="#" class=""><span>Customized Gifts</span></a>
+                            <a href="#" class=""><span>Customized Services</span></a>
+                            <a href="#" class=""><span>Printed T-shirt</span></a>
+                            <a href="#" class=""><span>Printed Mugs</span></a>
+                            <a href="#" class=""><span>Printed bottles</span></a>
+                            <a href="#" class=""><span>Printed Business Cards</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6" style="display: grid; justify-content: end;">
+                    <p>Social Media Links</p>
+                    <ul class="list-inline">
+                        <li class="list-inline-item me-4">
+                            <a href="#!"><i class="bi-facebook fs-3"></i></a>
+                        </li>
+                        <li class="list-inline-item me-4">
+                            <a href="#!"><i class="bi-twitter fs-3"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!"><i class="bi-instagram fs-3"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-muted text-center small mb-4 mb-lg-0 mt-3">&copy; Your Website 2023. All Rights Reserved.
+            </p>
         </div>
     </footer>
 

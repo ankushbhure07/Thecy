@@ -223,12 +223,12 @@
 
     <div class="container mt-5 mb-5">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-12 col-lg-12 col-sm-12 text-center">
                 <h1 style="font-size: 6rem; color: black; margin-bottom: 2rem;"> <strong>Our <br> Services</strong></h1>
-                <p style="color: rgb(62, 59, 59);">We offer high-quality, cost-effective products that suit your brand
+                <p style="color: #3e3b3b;">We offer high-quality, cost-effective products that suit your brand
                     identity.</p>
             </div>
-            <div class="col-md-8">
+            <div class="col-12 col-lg-12 col-sm-12">
                 <div class="row">
                     <div class="col-4 text-center mt-4" style="border-right: 4px solid black;">
                         <i class="fa-regular fa-star"></i><br><br>
