@@ -357,7 +357,9 @@
                     </div>
                 </div>
             </div>
-
+            <div class="container">
+                <h1 class="text-center" style="color:red; font-weight: 600;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti magnam et labore nesciunt qui quo minima</h1>
+            </div>
 
 
 
@@ -387,14 +389,14 @@
                 autoplaySpeed: 2000,
                 arrows: true,
                 responsive: [{
-                        breakpoint: 600,
+                        // breakpoint: 600,
                         settings: {
                         slidesToShow: 2,
                         slidesToScroll: 1,
                         },
                     },
                     {
-                        breakpoint: 400,
+                        // breakpoint: 400,
                         settings: {
                             arrows: false,
                             slidesToShow: 1,

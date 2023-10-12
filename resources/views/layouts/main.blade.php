@@ -158,7 +158,7 @@
 <body>
 
 
-    <div class="container" style="border-bottom: 3px solid black; margin-bottom: 25px;">
+    <div class="container">
         <nav class="navbar navbar-expand-sm">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{{ url('/') }}" style="font-weight:600;font-size: 1.5rem;">C<span
