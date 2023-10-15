@@ -93,7 +93,7 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            border: 2px solid #000000;            
+            border: 2px solid #000000;
             transition: 0.2s ease-in-out;
         }
 
@@ -101,6 +101,27 @@
             color: #ff1b1b;
             border: 2px solid #ff1b1b;
         }
+
+        #OurServices {
+            font-size: 6rem;
+        }
+
+        @media (min-width: 320px) {
+            #OurServices {
+                font-size: 4.2rem;
+            }
+        }
+
+        @media (min-width: 786px) {
+            #OurServices {
+                font-size: 6rem;
+            }
+        }
+
+        .services {
+            border-right: 4px solid black;
+            text-align: center;
+        }      
     </style>
 @endsection
 @section('content')
@@ -224,13 +245,13 @@
     <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-12 col-lg-12 col-sm-12 text-center">
-                <h1 style="font-size: 6rem; color: black; margin-bottom: 2rem;"> <strong>Our <br> Services</strong></h1>
+                <h1 id="OurServices"> <strong>Our <br> Services</strong></h1>
                 <p style="color: #3e3b3b;">We offer high-quality, cost-effective products that suit your brand
                     identity.</p>
             </div>
             <div class="col-12 col-lg-12 col-sm-12">
                 <div class="row">
-                    <div class="col-4 text-center mt-4" style="border-right: 4px solid black;">
+                    <div class="col-12 col-lg-4 mt-4 services">
                         <i class="fa-regular fa-star"></i><br><br>
                         <h3>Product Quality</h3>
                         <br>
@@ -239,7 +260,7 @@
                             <i class="fa-solid fa-arrow-right"></i>
                         </div> --}}
                     </div>
-                    <div class="col-4 text-center mt-4" style="border-right: 4px solid black;">
+                    <div class="col-12 col-lg-4 mt-4 services">
                         <i class="fa-regular fa-star"></i><br><br>
                         <h3>Product Quality</h3>
                         <br>
@@ -248,7 +269,7 @@
                             <i class="fa-solid fa-arrow-right"></i>
                         </div> --}}
                     </div>
-                    <div class="col-4 text-center mt-4">
+                    <div class="col-12 col-lg-4 mt-4" style="text-align: center">
                         <i class="fa-regular fa-star"></i><br><br>
                         <h3>Product Quality</h3>
                         <br>
@@ -339,4 +360,15 @@
 
 @section('footer')
     <!-- Footer-->
+@endsection
+@section('customjs')
+    <script>
+        $(document).ready(function() {
+            var screenWidth = $(window).width();
+            if (screenWidth <= 768) {
+                $(".services").css("border-bottom", "3px solid black");
+                $(".services").css("border-right", "none");
+            }
+        });
+    </script>
 @endsection

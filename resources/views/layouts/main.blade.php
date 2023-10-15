@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <link href="{{ asset('public/css/styles.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
 
     @yield('customcss')
     <style>
@@ -105,12 +107,14 @@
             display: grid;
             justify-content: center;
         }
-        #footerLast{
+
+        #footerLast {
             display: grid;
             justify-content: end;
-            
+
         }
-        #footerFirst{
+
+        #footerFirst {
             display: grid;
             justify-content: start;
         }
@@ -253,7 +257,7 @@
             <div class="row">
                 <div class="col-6 col-md-3 col-xs-6">
                     <div class="" id="footerFirst">
-                        <h5 class="footerHeading">NAVIGATION LINKS</h5>
+                        <h5 class="footerHeading">PAGES LINKS</h5>
                         <ul class="footerUi mb-2">
                             <li class=""><a href="{{ url('/') }}" aria-current="page">Home</a></li>
                             <li class=""><a href="{{ url('/services') }}">Services</a></li>
@@ -296,6 +300,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="container">
             <div class="row  mt-5">
                 <div class="col-6">
                     <h6 class="">POPULAR SEARCHES</h6>
@@ -326,9 +332,10 @@
                     </ul>
                 </div>
             </div>
-            <p class="text-muted text-center small mb-4 mb-lg-0 mt-3">&copy; Your Website 2023. All Rights Reserved.
-            </p>
         </div>
+        <p class="text-muted text-center small mb-4 mb-lg-0 mt-3">&copy; Your Website 2023. All Rights Reserved.
+        </p>
+
     </footer>
 
     <!-- Bootstrap JavaScript Libraries -->
@@ -341,6 +348,15 @@
     </script>
 </body>
 @yield('customjs')
-<script></script>
+<script>
+    $(document).ready(function() {
+        var screenWidth = $(window).width();
+        if (screenWidth <= 475) {
+            $(".footerlinks").css("justify-content", "center");
+            $("#footerLast").css("justify-content", "center");
+            $("#footerFirst").css("justify-content", "center");
+        }
+    });
+</script>
 
 </html>
