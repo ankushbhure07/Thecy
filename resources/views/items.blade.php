@@ -108,8 +108,9 @@
             </div>
         </div>
     </header>
+
     {{-- after small screen --}}
-    <div class="row bg-dark" id="afterSmall">
+    <div class="row" id="afterSmall">
         <div class="d-flex">
             <div class="col-md-6">
                 <select class="form-select w-100">
@@ -202,23 +203,23 @@
                 <div class="col-9 col-lg-9 col-md-12 col-12 pro-list mb-5">
                     <div class="row">
                         @foreach ($product as $item)
-                            <div class="col-6 col-md-4 col-lg-3 order-lg-1 showcase-text" style="margin-bottom: 25px">
+                            <div class="col-6 col-md-3 order-lg-1 showcase-text" style="margin-bottom: 25px">
                                 <a href="{{ route('single', $item->id) }}">
                                     <img src="public/product_image/{{ $item->product_image }}" class="img-fluid"
                                         alt="">
                                 </a>
-                                <div class="row justify-content-center align-items-center g-2 mt-1">
+                                <div class="row justify-content-center align-items-center g-2 mt-1">                                    
                                     <div class="col-6">
-                                        <h6 class="item-font" style="text-align: left;">{{ $item->product_name }}</h6>
+                                        <span class="item-font float-start"> <strong> {{ $item->product_name }} </strong></span>
                                     </div>
                                     <div class="col-6">
-                                        <h6 class="item-font" style="text-align: right;"> {{ $item->product_type }} </h6>
+                                        <span class="item-font float-end"> <strong>₹ {{ $item->product_price }} </strong></span>
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <span class="lead mb-0">₹ {{ $item->product_price }}</span>
+                                        <span class="lead mb-0">₹ {{ $item->product_type }}</span>
                                     </div>
                                 </div>
                             </div>

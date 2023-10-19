@@ -41,13 +41,13 @@
             margin: 4px !important;
         }
 
+        .item-font {
+            font-size: 20px;
+        }
+
         @media (max-width: 320px) {
             .showcase .showcase-text {
                 padding: 0.5rem !important;
-            }
-
-            .item-font {
-                font-size: 6px;
             }
 
             #rs {
@@ -56,22 +56,23 @@
 
             #allItems a {
                 font-size: 1.8rem;
+            }            
+        }
+        @media (max-width: 375px){
+            .item-font {
+                font-size: 12px;
             }
         }
 
-        @media (max-width: 1024px) {
-            .item-font {
-                font-size: 19px;
-            }
-        }
+        @media (max-width: 1024px) {}
 
         @media (max-width: 425px) {
-            .item-font {
-                font-size: 16px;
-            }
-
             .col-6 {
                 padding: 0;
+            }
+
+            .item-font {
+                font-size: 17px;
             }
         }
 
@@ -121,7 +122,7 @@
         .services {
             border-right: 4px solid black;
             text-align: center;
-        }      
+        }
     </style>
 @endsection
 @section('content')
@@ -215,22 +216,22 @@
         <div class="container-fluid p-0" id="images" style="width: 90%;">
             <div class="row g-0">
                 @foreach ($product as $item)
-                    <div class="col-6 col-md-4 col-lg-3 order-lg-1 showcase-text">
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-2 order-lg-1 showcase-text">
                         <a href="{{ route('single', $item->id) }}">
                             <img src="public/product_image/{{ $item->product_image }}" class="img-fluid" alt="">
                         </a>
                         <div class="row justify-content-center align-items-center g-2 mt-1">
                             <div class="col-6">
-                                <h3 class="item-font" style="text-align: left;">{{ $item->product_name }}</h3>
+                                <span class="item-font float-start"> <strong> {{ $item->product_name }} </strong></span>
                             </div>
                             <div class="col-6">
-                                <h3 class="item-font" style="text-align: right;"> {{ $item->product_type }} </h3>
+                                <span class="item-font float-end"> <strong>₹ {{ $item->product_price }} </strong></span>
                             </div>
                         </div>
                         <hr>
                         <div class="row">
                             <div class="col-md-6">
-                                <h4 class="mb-0" style="font-weight: 400" id="rs">₹ {{ $item->product_price }}</h4>
+                                <h6 class="mb-0" style="font-weight: 400" id="rs"> {{ $item->product_type }}</h6>
                             </div>
                         </div>
                     </div>
