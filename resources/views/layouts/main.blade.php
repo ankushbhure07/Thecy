@@ -348,15 +348,6 @@
     </script>
 </body>
 @yield('customjs')
-<script>
-    $(document).ready(function() {
-        var screenWidth = $(window).width();
-        if (screenWidth <= 475) {
-            $(".footerlinks").css("justify-content", "center");
-            $("#footerLast").css("justify-content", "center");
-            $("#footerFirst").css("justify-content", "center");
-        }
-    });
-</script>
+ 
 
 </html>
