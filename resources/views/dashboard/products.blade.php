@@ -85,8 +85,7 @@
                                     @php
                                         // dd(DB::table('products')->where('product_size', null)->get());
                                     @endphp
-                                    @foreach ($product as $pro)
-                                       
+                                    @foreach ($product as $pro)                                       
                                         <tr>
                                             <td>{{ $pro->product_name }}</td>
                                             <td>{{ $pro->product_price }}</td>

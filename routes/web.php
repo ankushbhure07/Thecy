@@ -19,7 +19,10 @@ use App\Http\Controllers\ContactController;
 */
 
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', function(){
+    return view('tyral');
+});
+// Route::get('/', [HomeController::class, 'index']);
 Route::get('/items', [HomeController::class, 'items'])->name('items');
 Route::get('/gifting', [HomeController::class, 'gifting'])->name('gifting');
 Route::get('/single/{id}', [SingleController::class, 'index'])->name('single');
