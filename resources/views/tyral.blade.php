@@ -336,7 +336,7 @@
     </header>
     <main>
         <div class="container center">
-            <h1 class="tracking-in-contract-bck">Comeing Soon..<span class="flicker-in-1">.</span></h1>
+            <h1 class="tracking-in-contract-bck">Coming Soon..<span class="flicker-in-1">.</span></h1>
         </div>
     </main>
     <footer>
